@@ -68,7 +68,7 @@ const chMemoriesList = [
 const bgList = [
 	['you ran away from home at an early age and found refuge in a temple. ', 'your family gave you to a temple, since they were unable or unwilling to care for you. ', 
 	'you grew up in a household with strong religious convictions. Entering the service of one or more gods seemed natural.', 'an impassioned sermon struck a chord deep in your soul and moved you to serve the faith. ', 
-	'you followed a childhood friend, a repected acquaintance, or someone you loved into religious service. ', 'you encountered a true servant of the gods. You were so insired that you immediately entered the service of a religious group. '],
+	'you followed a childhood friend, a repected acquaintance, or someone you loved into religious service. ', 'you encountered a true servant of the gods. You were so inspired that you immediately entered the service of a religious group. '],
 	['you were left to your own devices, and your knack for manipulating others helped you survive. ', 'you learned early on that people are gullible and easy to exploit. ',
 	'you often geot in trouble, but you managed to talk your way out of it every time. ', 'you took up with a con artist, from whom you learned your craft. ',
 	'after a charlatan fleeced your family, you decided to learn the trade so you would never be fooled by such deception again. ', 'you were poor or feared becoming poor, so you learned the tricks needed to keep yourself out of poverty. '],
