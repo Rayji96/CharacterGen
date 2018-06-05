@@ -50,12 +50,6 @@ const parentFate = [
 	'was imprisoned, enslaved, or otherwise taken away. ', 'abandonded you. ', 'disappeared to an unknown fate. '
 ]
 
-const deathFate = [
-	'died to unknown circumstance. ', 'was murdered. ', 'was killed in battle. ', 'died in an accident related to class or occupation. ', 'died in an accident unrelated to class or occupation. ', 
-	'died due to natural causes, such as disease or old age. ', 'commited suicide. ', 'was torn apart by an animal or a natural disaster. ', 'was consumed by a monster. ', 'was executed for a crime or tortured to death. ',
-	'died due to a bizarre event, such as being hit by a meteorite, struck down by an angry god, or killed by a hatching slaad egg. '
-]
-
 const lifestyleList = [
 	'a wretched lifestyle ', 'a squalid lifestyle ', 'a poor lifestyle ', 'a modest lifestyle ', 'a comfortable lifestyle ', 'a wealthy lifestyle ', 'an aristocratic lifestyle '
 ]
@@ -184,6 +178,293 @@ const classList = [
 	]
 ]
 
+const adventureFate = [
+	'You nearly died. You have nasty scars on your body, and you are missing an ear, ',
+	'You suffered a grievous injury. Although the wound healed, it still pains you from time to time. ',
+	'You were wounded, but in time you fully recovered. ',
+	'You contracted a disease while exploring a filthy warren. You recovered from the disease, but you have a persistent cough, pockmarks on your skin, or prematurely gray hair. ',
+	'You were poisoned by a trap or a monster. You recovered, but the next time you must make a saving throw against poison, you make the saving throw with disadvantage. ',
+	'You lost something of sentimental value to you during your adventure. Remove one trinket from your possessions. ',
+	'You were terribly frightened by something you encountered and ran away, abandoning your companions to their fate. ',
+	'You learned a great deal during your adventure. The next time you make an ability check or a saving throw, you have advantage on the roll. ',
+	'You found some treasure on your adventure. You have ',
+	'You found a considerable amount of treasure on your adventure. You have ',
+	'You came across a common magic item (of the DM’s choice). '
+]
+
+const magicalFate = [
+	'You were charmed or frightened by a spell. ',
+	'You were injured by the effect of a spell. ',
+	'You witnessed a powerful spell being cast by a cleric, a druid, a sorcerer, a warlock, or a wizard. ',
+	'You drank a potion (of the DM’s choice). ',
+	'You found a spell scroll (of the DM’s choice) and succeeded in casting the spell it contained. ',
+	'You were affected by teleportation magic. ',
+	'You turned invisible for a time. ',
+	'You identified an illusion for what it was. ',
+	'You saw a creature being conjured by magic. ',
+	'Your fortune was read by a diviner. Roll twice on the Life Events table, but don’t apply the results. Instead, the DM picks one event as a portent of your future (which might or might not come true). '
+]
+
+const boonFate = [
+	'A friendly wizard gave you a spell scroll containing one cantrip (of the DM’s choice). ',
+	'You saved the life of a commoner, who now owes you a life debt. This individual accompanies you on your travels and performs mundane tasks for you, but will leave if neglected, abused, or imperiled. Determine details about this character by using the supplemental tables and working with your DM. ',
+	'You found a riding horse. ',
+	'You found some money. You have ',
+	'A relative bequeathed you a simple weapon of your choice. ',
+	'You found something interesting. You gain one additional trinket. ',
+	'You once performed a service for a local temple. The next time you visit the temple, you can receive healing up to your hit point maximum. ',
+	'A friendly alchemist gifted you with a potion of healing or a flask of acid, as you choose. ',
+	'You found a treasure map. ',
+	'A distant relative left you a stipend that enables you to live at the comfortable lifestyle for '
+]
+
+const crimeFate = [
+	'murder. ',
+	'theft. ',
+	'burglary. ',
+	'assault. ',
+	'smuggling. ',
+	'kidnapping. ',
+	'extortion. ',
+	'counterfeiting. '
+]
+
+const punishFate = [
+	'You did not commit the crime and were exonerated after being accused. ',
+	'You committed the crime or helped do so, but nonetheless the authorities found you not guilty. ',
+	'You were nearly caught in the act. You had to flee and are wanted in the community where the crime occurred. ',
+	'You were caught and convicted. You spent time in jail, chained to an oar, or performing hard labor. You served a sentence of '
+]
+
+const supernaturalFate = [
+	'You were ensorcelled by a fey and enslaved for ',
+	'You saw a demon and ran away before it could do anything to you. ',
+	'A devil tempted you. Make a DC 10 Wisdom saving throw. On a failed save, your alignment shifts one step toward evil (if it’s not evil already), and you start the game with an additional ',
+	'You woke up one morning miles from your home, with no idea how you got there. ',
+	'You visited a holy site and felt the presence of the divine there. ',
+	'You witnessed a falling red star, a face appearing in the frost, or some other bizarre happening. You are certain that it was an omen of some sort. ',
+	'You escaped certain death and believe it was the intervention of a god that saved you. ',
+	'You witnessed a minor miracle. ',
+	'You explored an empty house and found it to be haunted. ',
+	'You were briefly possessed by ',
+	'You saw a ghost. ',
+	'You saw a ghoul feeding on a corpse. ',
+	'A celestial or a fiend visited you in your dreams to give a warning of dangers to come. ',
+	'You briefly visited the Feywild or the Shadowfell. ',
+	'You saw a portal that you believe leads to another plane of existence. '
+]
+
+const tragedyFate = [
+	'A family member or a close friend ',
+	'A friendship ended bitterly, and the other person is now hostile to you. The cause might have been a misunderstanding or something you or the former friend did. ',
+	'You lost all your possessions in a disaster, and you had to rebuild your life. ',
+	'You were imprisoned for a crime you didn’t commit and spent ',
+	'War ravaged your home community, reducing everything to rubble and ruin. In the aftermath, you either helped your town rebuild or moved somewhere else. ',
+	'A lover disappeared without a trace. You have been looking for that person ever since. ',
+	'A terrible blight in your home community caused crops to fail, and many starved. You lost a sibling or some other family member. ',
+	'You did something that brought terrible shame to you in the eyes of your family. You might have been involved in a scandal, dabbled in dark magic, or offended someone important. The attitude of your family members toward you becomes indifferent at best, though they might eventually forgive you. ',
+	'For a reason you were never told, you were exiled from your community. You then either wandered in the wilderness for a time or promptly found a new place to live. ',
+	'A romantic relationship ended ',
+	'A current or prospective romantic partner of yours '
+]
+
+const warFate = [
+	'You were knocked out and left for dead. You woke up hours later with no recollection of the battle. ',
+	'You were badly injured in the fight, and you still bear the awful scars of those wounds. ',
+	'You were badly injured in the fight, and you still bear the awful scars of those wounds. ',
+	'You ran away from the battle to save your life, but you still feel shame for your cowardice. ',
+	'You suffered only minor injuries, and the wounds all healed without leaving scars. ',
+	'You suffered only minor injuries, and the wounds all healed without leaving scars. ',
+	'You suffered only minor injuries, and the wounds all healed without leaving scars. ',
+	'You survived the battle, but you suffer from terrible nightmares in which you relive the experience. ',
+	'You survived the battle, but you suffer from terrible nightmares in which you relive the experience. ',
+	'You escaped the battle unscathed, though many of your friends were injured or lost. ',
+	'You escaped the battle unscathed, though many of your friends were injured or lost. ',
+	'You acquitted yourself well in battle and are remembered as a hero. You might have received a medal for your bravery. '
+]
+
+const weirdFate = [
+	'You were turned into a toad and remained in that form for ',
+	'You were petrified and remained a stone statue for a time until someone freed you. ',
+	'You were enslaved by a hag, a satyr, or some other being and lived in that creature’s thrall for ',
+	'A dragon held you as a prisoner for ',
+	'You were taken captive by a race of evil humanoids such as drow, kuo-toa, or quaggoths. You lived as a slave in the Underdark until you escaped. ',
+	'You served a powerful adventurer as a hireling. You have only recently left that service. Use the supplemental tables and work with your DM to determine the basic details about your former employer. ',
+	'You went insane for ',
+	'A lover of yours was secretly a silver dragon. ',
+	'You were captured by a cult and nearly sacrificed on an altar to the foul being the cultists served. You escaped, but you fear they will find you. ',
+	'You met a demigod, an archdevil, an archfey, a demon lord, or a titan, and you lived to tell the tale. ',
+	'You were swallowed by a giant fish and spent a month in its gullet before you escaped. ',
+	'A powerful being granted you a wish, but you squandered it on something frivolous. '
+]
+
+const deathFate = [
+	'died to unknown circumstance. ', 'was murdered. ', 'was killed in battle. ', 'died in an accident related to class or occupation. ', 'died in an accident unrelated to class or occupation. ', 
+	'died due to natural causes, such as disease or old age. ', 'commited suicide. ', 'was torn apart by an animal or a natural disaster. ', 'was consumed by a monster. ', 'was executed for a crime or tortured to death. ',
+	'died due to a bizarre event, such as being hit by a meteorite, struck down by an angry god, or killed by a hatching slaad egg. '
+]
+
+const eventList = [
+	'You suffered a tragedy. ',
+	'You gained a bit of good fortune. ',
+	'You fell in love or got married. If you get this result more than once, you can choose to have a child instead. Work with your DM to determine the identity of your love interest. ',
+	'You made an enemy of an adventurer. Use the supplemental tables and work with your DM to determine this hostile character’s identity and the danger this enemy poses to you. ',
+	'You made a friend of an adventurer. Use the supplemental tables and work with your DM to add more detail to this friendly character and establish how your friendship began. ',
+	'You spent time working in a job related to your background. Start the game with an extra ',
+	'You met someone important. Use the supplemental tables to determine this character’s identity and how this individual feels about you. Work out additional details with your DM as needed to fit this character into your backstory. ',
+	'You went on an adventure. Work with your DM to determine the nature of the adventure and the creatures you encountered. ',
+	'You had a supernatural experience. ',
+	'You fought in a battle. Work with your DM to come up with the reason for the battle and the factions involved. It might have been a small conflict between your community and a band of orcs, or it could have been a major battle in a larger war. ',
+	'You committed ',
+	'You encountered something magical. ',
+	'Something truly strange happened to you. '
+]
+
+const creatureType = [
+	'a celestial',
+	'a devil', 
+	'a demon',
+	'a fey',
+	'an elemental',
+	'an undead'
+]
+
+function randomAdventure () {
+	let r = Math.floor(Math.random() * 100 + 1);
+	if (r < 11){
+		return adventureFate[0] + Math.floor(Math.random() * 3 + 1) + ' fingers, or ' + Math.floor(Math.random() * 4 + 1) + ' toes. ';
+	}else if(r < 21){
+		return adventureFate[1];
+	}else if(r < 31){
+		return adventureFate[2];
+	}else if(r < 41){
+		return adventureFate[3];
+	}else if(r < 51){
+		return adventureFate[4];
+	}else if(r < 61){
+		return adventureFate[5];
+	}else if(r < 71){
+		return adventureFate[6];
+	}else if(r < 81){
+		return adventureFate[7];
+	}else if(r < 91){
+		return adventureFate[8] + (Math.floor(Math.random() * 6 + 1) + Math.floor(Math.random() * 6 + 1)) +' gp left from your share of it. ';
+	}else if(r < 100){
+		return adventureFate[9] + Math.floor(Math.random() * 20 + 50) +' gp left from your share of it. ';
+	}else{
+		return adventureFate[10];
+	}
+}
+
+function randomMagic (){
+	return magicalFate[Math.floor(Math.random() * 10)];
+}
+
+
+function randomBoon (){
+	const r = Math.floor(Math.random() * 10);
+	if(r == 3){
+		return boonFate[3] + Math.floor(Math.random() * 20 + 1) + ' gp in addition to your regular starting funds. ';
+	}else if(r == 9){
+		return boonFate[9] + Math.floor(Math.random() * 20 + 1) + ' years. If you choose to live at a higher lifestyle, you reduce the price of the lifestyle by 2 gp during that time period. ';
+	}else{
+		return boonFate[r];
+	}
+}
+
+function randomCrime (){
+	return crimeFate[Math.floor(Math.random() * 8)];
+}
+
+function randomPunish (){
+	const r = Math.floor(Math.random() * 12 + 1);
+	if(r < 4){
+		return punishFate[0];
+	}else if(r < 7){
+		return punishFate[1];
+	}else if(r < 9){
+		return punishFate[2];
+	}else{
+		return punishFate[3] +  Math.floor(Math.random() * 4 + 1) + ' years or succeeded in escaping after that much time. ';
+	}
+}
+
+function randomSupernatural () {
+	let r = Math.floor(Math.random() * 100 + 1);
+	if (r < 6){
+		return supernaturalFate[0] + Math.floor(Math.random() * 6 + 1) + ' years before you escaped. ';
+	}else if(r < 11){
+		return supernaturalFate[1];
+	}else if(r < 16){
+		return supernaturalFate[2] + Math.floor(Math.random() * 20 + 51) + ' gp. ';
+	}else if(r < 21){
+		return supernaturalFate[3];
+	}else if(r < 31){
+		return supernaturalFate[4];
+	}else if(r < 41){
+		return supernaturalFate[5];
+	}else if(r < 51){
+		return supernaturalFate[6];
+	}else if(r < 61){
+		return supernaturalFate[7];
+	}else if(r < 71){
+		return supernaturalFate[8];
+	}else if(r < 76){
+		return supernaturalFate[9] + creatureType[Math.floor(Math.random() * 6)] + '. ';
+	}else if(r < 81){
+		return supernaturalFate[10];
+	}else if(r < 86){
+		return supernaturalFate[11];
+	}else if(r < 91){
+		return supernaturalFate[12];
+	}else if(r < 96){
+		return supernaturalFate[13];
+	}else{
+		return adventureFate[14];
+	}
+}
+
+function randomTragedy (){
+	const r = Math.floor(Math.random() * 12 - 1);
+	if(r <= 0){
+		return tragedyFate[0] + randomDeath();
+	}else if(r == 3){
+		return tragedyFate[3] + Math.floor(Math.random() * 6 + 1) + ' years at hard labor, in jail, or shackled to an oar in a slave galley. ';
+	}else if(r == 9){
+		return tragedyFate[9] + Math.floor(Math.random() * 2) ? ' with bad feelings. ' : ' amicably. ';
+	}else if(r == 10){
+		let fate = randomDeath();
+		if(fate == 'was murdered. '){
+			r2 = Math.floor(Math.random() * 12 + 1);
+			if (r2 == 1){
+				fate = fate + "You were responsible, whether directly or indirectly. ";
+			}
+		}
+		return tragedyFate[10] + fate;
+	}else{
+		return tragedyFate[r];
+	}
+}
+
+function randomWar (){
+	return warFate[Math.floor(Math.random() * 12)];
+}
+
+function randomWeird (){
+	const r = Math.floor(Math.random() * 12);
+	if(r == 0){
+		return weirdFate[0] + Math.floor(Math.random() * 4 + 1) + ' weeks. ';
+	}else if(r == 2){
+		return weirdFate[2] + Math.floor(Math.random() * 6 + 1) + ' years. ';
+	}else if(r == 3){
+		return weirdFate[3] + Math.floor(Math.random() * 4 + 1) + ' months until adventurers killed it. ';
+	}else if(r == 6){
+		return weirdFate[6] + Math.floor(Math.random() * 6 + 1) + ' years and recently regained your sanity. A tic or some other bit of odd behavior might linger. ';
+	}else{
+		return weirdFate[r];
+	}
+}
+
 function randomDeath () {
 	let r = Math.floor(Math.random() * 12 + 1);
 	if (r < 2){
@@ -227,7 +508,7 @@ function newCharacter () {
 	}else{
 		character = character + alignmentList[alignmentNumber];
 	}
-	character = character + ' ' + race[raceNumber] +  ' ' + combatClass[classNumber] + '.\nYou have a background as ' + backgrounds[bgNum] + '.';
+	character = character + ' ' + race[raceNumber] +  ' ' + combatClass[classNumber] + ". </br> You have a background as " + backgrounds[bgNum] + '.';
 	document.getElementById('character').innerHTML = character;
 
 	let parent = "";
@@ -473,6 +754,73 @@ function newCharacter () {
 
 	const classChoiceNum = Math.floor(Math.random() * 6);
 	document.getElementById('class').innerHTML = "You became a " + combatClass[classNumber] + " because " + classList[classNumber][classChoiceNum];
+
+	const ageNum = Math.floor(Math.random() * 100);
+	let ageString = "You are now ";
+	let eventsNum = 0;
+
+	if (ageNum < 21){
+		ageString = ageString + '20 years old or younger (relative to your race). ';
+		eventsNum = 1;
+	}else if(ageNum < 60){
+		ageString = ageString + '21-30 years old (relative to your race). ';
+		eventsNum =  Math.floor(Math.random() * 4 + 1);
+	}else if(ageNum < 70){
+		ageString = ageString + '31-40 years old (relative to your race). ';
+		eventsNum =  Math.floor(Math.random() * 6 + 1);
+	}else if(ageNum < 90){
+		ageString = ageString + '41-50 years old (relative to your race). ';
+		eventsNum =  Math.floor(Math.random() * 8 + 1);
+	}else if(ageNum <100){
+		ageString = ageString + '51-60 years old (relative to your race). ';
+		eventsNum =  Math.floor(Math.random() * 10 + 1);
+	}else{
+		ageString = ageString + '61 years old or older (relative to your race). ';
+		eventsNum =  Math.floor(Math.random() * 12 + 1);
+	}
+
+	document.getElementById('age').innerHTML = ageString;
+
+	let eventString = "";
+	let love = false;
+	for (let i = 0; i < eventsNum; i++){
+		const eventNum = Math.floor(Math.random() * 100 + 1);
+
+		if(eventNum < 11){
+			eventString = eventString + eventList[0] + randomTragedy() + "</br>";
+		}else if(eventNum < 21){
+			eventString = eventString + eventList[1] + randomBoon() + "</br>";
+		}else if(eventNum < 31){
+			if (love){
+				eventString = eventString + "You had a child. " + "</br>";
+			}else{
+				love = true;
+				eventString = eventString + "You fell in love or got married. " + "</br>";
+			}
+		}else if(eventNum < 41){
+			eventString = eventString + eventList[3] + (Math.floor(Math.random() * 2)? "You are to blame for the rift. " : "You are blameless for the rift. ") + "</br>";
+		}else if(eventNum < 51){
+			eventString = eventString + eventList[4] + "</br>";
+		}else if(eventNum < 71){
+			eventString = eventString + eventList[5] + (Math.floor(Math.random() * 6 + 1) + Math.floor(Math.random() * 6 + 1)) + " gp. " + "</br>";
+		}else if(eventNum < 76){
+			eventString = eventString + eventList[6] + "</br>";
+		}else if(eventNum < 81){
+			eventString = eventString + eventList[7] + randomAdventure() + "</br>";
+		}else if(eventNum < 86){
+			eventString = eventString + eventList[8] + randomSupernatural() + "</br>";
+		}else if(eventNum < 91){
+			eventString = eventString + eventList[9] + randomWar() + "</br>";
+		}else if(eventNum < 96){
+			eventString = eventString + eventList[10] + randomCrime() + randomPunish() + "</br>";
+		}else if(eventNum < 100){
+			eventString = eventString + eventList[11] + randomMagic() + "</br>";
+		}else{
+			eventString = eventString + eventList[12] + randomWeird() + "</br>";
+		}
+	}
+
+	document.getElementById('events').innerHTML = eventString;
 }
 
 window.onload = function(){
