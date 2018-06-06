@@ -431,7 +431,7 @@ function randomTragedy (){
 	}else if(r == 3){
 		return tragedyFate[3] + Math.floor(Math.random() * 6 + 1) + ' years at hard labor, in jail, or shackled to an oar in a slave galley. ';
 	}else if(r == 9){
-		return tragedyFate[9] + Math.floor(Math.random() * 2) ? ' with bad feelings. ' : ' amicably. ';
+		return tragedyFate[9] + (Math.floor(Math.random() * 2) ? ' with bad feelings. ' : ' amicably. ');
 	}else if(r == 10){
 		let fate = randomDeath();
 		if(fate == 'was murdered. '){
