@@ -420,7 +420,7 @@ function randomSupernatural () {
 	}else if(r < 96){
 		return supernaturalFate[13];
 	}else{
-		return adventureFate[14];
+		return supernaturalFate[14];
 	}
 }
 
