@@ -55,7 +55,7 @@ const lifestyleList = [
 ]
 
 const homeList = [
-	'on the streets. ', 'in a rundown shack. ', 'without a permanent residence; you moved around a lot. ', 'in an encampment or village in the wilderness. ', 'in an apartment in a rundwon neighborhood. ',
+	'on the streets. ', 'in a rundown shack. ', 'without a permanent residence; you moved around a lot. ', 'in an encampment or village in the wilderness. ', 'in an apartment in a rundown neighborhood. ',
 	'in a small house. ', 'in a large house. ', 'in a mansion. ', 'in a palace or castle. '
 ]
 
@@ -98,7 +98,7 @@ const bgList = [
 	'you impressed a wizard who told you that you were squandering your talents and should seek out an education to take advantage of your gifts. ', 'one fo your parents or a relative gave you a basic education that whetted your appetite, and you left home to build on what you had learned. '],
 	['you were press-ganged by pirates and forced to serve on their ship until you finally escaped. ', 'you wanted to see the world, so you signed on as a deck-hand for a merchant ship.',
 	'one of your relatives was a sailor who took you to sea. ', 'you needed to escape your community quickly, so you stowed away on a ship. When the crew found you, you were forced to work for your passage. ',
-	'reavers attacked you community, so you found refuge on a ship until you could seek vengeance. ', 'you had few prospects where you were living, so you left to find your fortune elsewhere.'],
+	'reavers attacked your community, so you found refuge on a ship until you could seek vengeance. ', 'you had few prospects where you were living, so you left to find your fortune elsewhere.'],
 	['you joined the militia to help protect your community from monsters.', 'a relative of yours was a soldier, and you wanted to carry on the family tradition. ',
 	'the local lord forced you to enlist in the army. ', 'war ravaged your homeland while you were growing up. Fighting was the only life you ever knew.',
 	'you wanted fame and fortune, so you joined a mercenary company, selling your sword to the highest bidder. ', 'invaders attacked your homeland. It was your duty to take up arms in defense of your people.'],
