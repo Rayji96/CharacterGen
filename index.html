@@ -25,6 +25,7 @@
 							<li><a href="#one">Origins</a></li>
 							<li><a href="#two">Personal Decisions</a></li>
 							<li><a href="#three">Life Events</a></li>
+							<li><a href="#four">AI Generated Backstory</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -38,6 +39,8 @@
 						<div class="inner">
 							<h1>This is Your Life...</h1>
 							<div id="character"></div>
+							<br>
+							<button onclick="newCharacter()">Generate a new character.</button>
 						</div>
 					</section>
 
@@ -77,6 +80,19 @@
 						</div>
 					</section>
 
+				<!-- Four -->
+					<section id="four" class="wrapper style2 fullscreen fade-up">
+						<div class="inner">
+							<h2>AI Generated Full Backstory</h2>
+							<div style="white-space: pre-line" id="generated"></div>
+							<br>
+							<input type="text" id="key" name="key" placeholder="Enter your OpenAI API key">
+							<br>
+							<button id="generate-button" onclick="generate()">Generate a backstory with GPT3.5</button>
+							<div id="loader" class="loader"></div>
+						</div>
+					</section>
+
 			</div>
 
 		<!-- Footer -->
@@ -89,7 +105,9 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/info.js"></script>
+			<script src="assets/js/lists.js"></script>
+			<script src="assets/js/random.js"></script>
+			<script src="assets/js/gpt_query.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
