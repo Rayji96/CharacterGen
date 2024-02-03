@@ -37,6 +37,10 @@ async function sendRequest(message, key) {
         })
         .catch((error) => {
             console.log(error);
+            document.getElementById('loader').style.visibility = 'hidden';
+            document.getElementById('generate-button').style.visibility = 'visible';
+            document.getElementById('key').style.visibility = 'visible';
+            document.getElementById('generated').innerHTML = error;
         });
 }
 
