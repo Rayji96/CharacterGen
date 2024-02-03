@@ -520,9 +520,10 @@ function newCharacter () {
 
 	totalBackstory = totalBackstory + "\n" + eventString
 	totalBackstory = totalBackstory.replaceAll("</br>","");
+
+	console.log(totalBackstory)
 }
 
 window.onload = function(){
 	newCharacter();
-	console.log(totalBackstory)
 };
