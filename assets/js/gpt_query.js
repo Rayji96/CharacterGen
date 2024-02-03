@@ -46,5 +46,6 @@ function generate () {
     document.getElementById('generate-button').style.visibility = 'hidden';
     document.getElementById('key').style.visibility = 'hidden';
     document.getElementById('loader').style.visibility = 'visible';
+    document.getElementById('generated').innerHTML = ""
 }
 
