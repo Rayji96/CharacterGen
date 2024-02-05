@@ -30,16 +30,16 @@ async function sendRequest(message, key) {
         })
         .then((data) => {
             console.log(data.choices[0].message.content)
-            document.getElementById('loader').style.visibility = 'hidden';
-            document.getElementById('generate-button').style.visibility = 'visible';
-            document.getElementById('key').style.visibility = 'visible';
+            document.getElementById('loader').style.display = 'none';
+            document.getElementById('generate-button').style.display = 'block';
+            document.getElementById('key').style.display = 'block';
             document.getElementById('generated').innerHTML = data.choices[0].message.content.replaceAll("\n","</br>");
         })
         .catch((error) => {
             console.log(error);
-            document.getElementById('loader').style.visibility = 'hidden';
-            document.getElementById('generate-button').style.visibility = 'visible';
-            document.getElementById('key').style.visibility = 'visible';
+            document.getElementById('loader').style.display = 'none';
+            document.getElementById('generate-button').style.display = 'block';
+            document.getElementById('key').style.display = 'block';
             document.getElementById('generated').innerHTML = error;
         });
 }
@@ -47,9 +47,9 @@ async function sendRequest(message, key) {
 function generate () {
     let key = document.getElementById('key').value
     sendRequest(totalBackstory, key)
-    document.getElementById('generate-button').style.visibility = 'hidden';
-    document.getElementById('key').style.visibility = 'hidden';
-    document.getElementById('loader').style.visibility = 'visible';
+    document.getElementById('generate-button').style.display = 'none';
+    document.getElementById('key').style.display = 'none';
+    document.getElementById('loader').style.display = 'block';
     document.getElementById('generated').innerHTML = ""
 }
 
